@@ -1,0 +1,64 @@
+analyzer:
+  exclude:
+    - "ios/**"
+  strong-mode:
+    implicit-casts: false
+    implicit-dynamic: false
+  errors:
+    missing_required_param: warning
+    missing_return: error
+  plugins:
+    - dart_code_metrics
+
+linter:
+  rules:
+    - always_declare_return_types
+    - annotate_overrides
+    - always_require_non_null_named_parameters
+    - always_put_required_named_parameters_first
+    - await_only_futures
+    - prefer_final_fields
+    - prefer_final_in_for_each
+    - prefer_final_locals
+    - unnecessary_lambdas
+    - flutter_style_todos
+    - only_throw_errors
+    - avoid_redundant_argument_values
+    - avoid_positional_boolean_parameters
+    - prefer_const_declarations
+    - prefer_relative_imports
+    - prefer_const_constructors
+    - use_key_in_widget_constructors
+    - prefer_const_constructors_in_immutables
+    - unnecessary_brace_in_string_interps
+    - parameter_assignments
+    - avoid_void_async
+    - sort_child_properties_last
+    - prefer_const_literals_to_create_immutables
+    - avoid_print
+    - sort_pub_dependencies
+    - sized_box_for_whitespace
+    - sort_constructors_first
+    - sort_unnamed_constructors_first
+
+dart_code_metrics:
+  anti-patterns:
+    - long-method
+    - long-parameter-list
+  metrics-exclude:
+    - ios/**
+  rules:
+    - always-remove-listener
+    - avoid-returning-widgets
+    - avoid-unnecessary-setstate
+    - avoid-unused-parameters
+    - avoid-wrapping-in-padding
+    - double-literal-format
+    - newline-before-return
+    - no-boolean-literal-compare
+    - no-empty-block
+    - prefer-trailing-comma
+    - no-equal-then-else
+    - binary-expression-operand-order
+    - prefer-intl-name
+    - provide-correct-intl-args
